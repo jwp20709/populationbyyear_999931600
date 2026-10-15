@@ -1,3 +1,4 @@
+
 # main.py
 # 동네별 인구 피라미드
 # 초보자도 이해하기 쉽도록 주요 코드에 한국어 주석을 달았습니다.
@@ -306,7 +307,11 @@ with card2:
 
 with card3:
     # 고령화율이 20%를 넘으면 카드 라벨에 주의 표시를 붙입니다.
-    aging_label = "⚠️ 고령화율 (65세 이상)" if aging_rate > 20 else "🌳 고령화율 (65세 이상)"
+    aging_label = (
+        "⚠️ 고령화율 (65세 이상)"
+        if aging_rate > 20
+        else "🌳 고령화율 (65세 이상)"
+    )
     st.metric(
         label=aging_label,
         value=f"{aging_rate:.1f}%",
